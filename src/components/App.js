@@ -1,14 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
 import "../App.css";
-import Button from "@material-ui/core/Button";
+import { connect } from "react-redux";
+import { handleInitialData } from "../actions/shared";
+import LoadingBar from "react-redux-loading";
+
 import SignIn from "./SignIn";
 
-function App() {
-  return (
-    <div>
-      <SignIn />
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    this.props.dispatch(handleInitialData());
+  }
+  render() {
+    return (
+      <div>
+        <LoadingBar />
+        <SignIn />
+      </div>
+    );
+  }
 }
 
-export default App;
+export default connect()(App);
