@@ -5,6 +5,7 @@ import { handleInitialData } from "../actions/shared";
 import LoadingBar from "react-redux-loading";
 
 import SignIn from "./SignIn";
+import Dashboard from "./Dashboard";
 
 class App extends Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <div>
         <LoadingBar />
-        <SignIn />
+        <Dashboard />
       </div>
     );
   }
