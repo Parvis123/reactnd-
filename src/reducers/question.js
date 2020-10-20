@@ -1,17 +1,17 @@
 import {
-  RECEIVE_QUESTIONS,
-  SAVE_QUESTIONS,
+  RECEIVE_QUESTION,
+  SAVE_QUESTION,
   SAVE_QUESTION_ANSWER,
 } from "../actions/questions";
 
 export default function questions(state = {}, action) {
   switch (action.type) {
-    case RECEIVE_QUESTIONS:
+    case RECEIVE_QUESTION:
       return {
         ...state,
         ...action.questions,
       };
-    case SAVE_QUESTIONS:
+    case SAVE_QUESTION:
       return {
         ...state,
         [action.question.id]: action.question,

@@ -4,7 +4,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <h3 className="center">Would You Rather:</h3>
+        <h3 className="center">Would You Rather</h3>
       </div>
     );
   }
