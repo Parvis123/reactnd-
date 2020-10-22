@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class page404 extends Component {
+class Page404 extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class page404 extends Component {
   }
 }
 
-export default page404;
+export default Page404;

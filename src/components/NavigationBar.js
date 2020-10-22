@@ -7,7 +7,7 @@ import { deleteAuthedUser } from "../actions/authedUser";
 
 class NavigationBar extends Component {
   logout = () => {
-    this.props.dispatch(deleteAuthedUser);
+    this.props.dispatch(deleteAuthedUser());
   };
 
   render() {

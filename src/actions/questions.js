@@ -8,10 +8,10 @@ export function receiveQuestions(questions) {
     questions,
   };
 }
-export function saveQuestion(questions) {
+export function saveQuestion(question) {
   return {
     type: SAVE_QUESTION,
-    questions,
+    question,
   };
 }
 export function saveQuestionAnswer(answer, questionId, authedUser) {

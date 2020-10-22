@@ -37,12 +37,12 @@ class SignIn extends Component {
         <Card>
           <Card.Header as="h5">Would You Rather App</Card.Header>
           <Card.Body>
-            <Card.Title>Sign In to begin the game</Card.Title>
+            <Card.Title>I am</Card.Title>
             <Form>
               <Form.Group controlId="users">
                 <Form.Control as="select" onChange={this.handleChange}>
                   <option hidden value="default">
-                    Sign in
+                    Who are you?
                   </option>
                   {this.props.users.map((id) => (
                     <option key={id} value={id}>
