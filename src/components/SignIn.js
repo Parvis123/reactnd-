@@ -30,7 +30,7 @@ class SignIn extends Component {
   render() {
     const { redirectToDashboard } = this.state;
     if (redirectToDashboard === true) {
-      return <Redirect to={"/"} />;
+      return <Redirect to={"/home"} />;
     }
     return (
       <div>

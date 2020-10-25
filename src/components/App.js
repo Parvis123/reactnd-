@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./SignIn";
 import Dashboard from "./Dashboard";
 import QuestionView from "./QuestionView";
-import Question from "./Question";
+import AddQuestion from "./AddQuestion";
 
 class App extends Component {
   componentDidMount() {
@@ -21,9 +21,10 @@ class App extends Component {
       <Router>
         <Fragment>
           <LoadingBar />
-          <Route path="/" exact component={Dashboard} />
-          <Route path="/signin" exact component={SignIn} />
-          <Route path="/question" exact component={QuestionView} />
+          <Route path="/home" exact component={Dashboard} />
+          <Route path="/" exact component={SignIn} />
+          <Route path="/add" exact component={AddQuestion} />
+          <Route path="/question/:id" exact component={QuestionView} />
         </Fragment>
       </Router>
     );

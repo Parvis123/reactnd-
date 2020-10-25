@@ -18,11 +18,12 @@ class QuestionView extends Component {
     });
   };
   render() {
-    if (!this.props.error) {
+    if (this.props.error) {
       return <Page404 />;
     }
     return (
       <div>
+        <NavigationBar />
         <h3>Questions</h3>
       </div>
     );
