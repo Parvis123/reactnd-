@@ -22,10 +22,10 @@ export function handleInitialData() {
   };
 }
 
-export function handleSaveQuestion(firstOption, secondOption, author) {
+export function handleSaveQuestion(firstOptionText, secondOptionText, author) {
   const question = {
-    firstOption: firstOption,
-    secondOption: secondOption,
+    firstOptionText: firstOptionText,
+    secondOptionText: secondOptionText,
     author: author,
   };
   return (dispatch) => {

@@ -45,10 +45,10 @@ class Dashboard extends Component {
               </Nav.Item>
             </Nav>
             {this.state.switchQuestion === false
-              ? this.props.unAnsweredQuestions.map((q) => (
+              ? this.props.questionUnAnswered.map((q) => (
                   <Poll key={q.id} questions={q} />
                 ))
-              : this.props.answeredQuestions.map((q) => (
+              : this.props.questionsAnswered.map((q) => (
                   <Poll key={q.id} questions={q} />
                 ))}
           </Col>
@@ -66,8 +66,8 @@ function mapStateToProps({ authedUser, questions, users }) {
     questionsAnswered: allQuestions
       .filter((question) => loggedinAnswers.includes(question.id))
       .sort((a, b) => b.timestamp - a.timestamp),
-    unAnsweredQuestions: allQuestions
-      .filter((question) => loggedinAnswers.includes(question.id))
+    questionUnAnswered: allQuestions
+      .filter((question) => !loggedinAnswers.includes(question.id))
       .sort((a, b) => b.timestamp - a.timestamp),
   };
 }

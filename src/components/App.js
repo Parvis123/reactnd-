@@ -11,6 +11,8 @@ import SignIn from "./SignIn";
 import Dashboard from "./Dashboard";
 import QuestionView from "./QuestionView";
 import AddQuestion from "./AddQuestion";
+import Page404 from "./Page404";
+import LeaderBoard from "./LeaderBoard";
 
 class App extends Component {
   componentDidMount() {
@@ -24,7 +26,9 @@ class App extends Component {
           <Route path="/home" exact component={Dashboard} />
           <Route path="/" exact component={SignIn} />
           <Route path="/add" exact component={AddQuestion} />
+          <Route path="/leaderboard" exact component={LeaderBoard} />
           <Route path="/question/:id" exact component={QuestionView} />
+          <Route path="/404" exact component={Page404} />
         </Fragment>
       </Router>
     );
